@@ -1,4 +1,10 @@
-from unittest2 import TestCase
+import six
+
+if six.PY2:
+    from unittest2 import TestCase
+else:
+    from unittest import TestCase
+
 from contextlib import contextmanager
 
 

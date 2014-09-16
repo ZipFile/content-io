@@ -1,5 +1,6 @@
 from .environment import env
 from .utils.uri import URI
+import six
 
 empty = object()
 
@@ -17,7 +18,7 @@ class Node(object):
 
     def __str__(self):
         content = self.render()
-        if isinstance(content, unicode):
+        if six.PY2 and isinstance(content, six.text_type):
             content = content.encode('utf-8')
         return content or ''
 
