@@ -1,4 +1,6 @@
 # coding=utf-8
+from __future__ import unicode_literals
+
 import sys
 
 VERSION = (1, 0, 1, 'final', 0)
